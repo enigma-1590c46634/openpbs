@@ -1,6 +1,6 @@
 # OpenPBS User Guide
 
-This is as condensed a possible. For more details see [References](##References).
+This is as condensed a possible. For more details see [References](#references).
 
 ## PBS Commands
 
