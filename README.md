@@ -72,6 +72,29 @@ You'll need the job identifier for any actions involving the job, such as checki
     qstat -f <job_id> | grep -e 'Job Id' -e 'Job_Name' -e 'Job_Owner' -e 'exec_vnode'
     ```
 
+4. Submit a job to a specific node.
+
+    ```bash
+    # List hosts
+    pbsnodes -a | grep Mom
+
+    # Submit
+    qsub -l host=<host> hello.sh
+    ```
+
+5. Request $n$ cpus. 
+
+    ```bash
+    qsub -l ncpus=4 hello.sh
+    ```
+
+6. Combine resource requests.
+
+    ```bash
+    qsub -l ncpus=4:host=<host> hello.sh
+    ```
+
+
 ------------------------------
 
 ## References
